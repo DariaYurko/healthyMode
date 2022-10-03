@@ -1,0 +1,309 @@
+@charset "UTF-8";
+/* 
+&display=swap
+&display=swap&subset=cyrillic-ext    -  если нужна кирилца
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:700&display=swap");
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/HelveticaNeueBoldCondensed.woff2") format("woff2"), url("../fonts/HelveticaNeueBoldCondensed.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/HelveticaNeue-Roman.woff2") format("woff2"), url("../fonts/HelveticaNeue-Roman.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/HelveticaNeueBlackCondensed.woff2") format("woff2"), url("../fonts/HelveticaNeueBlackCondensed.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* ====================== Обнуление ====================================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: inherit;
+}
+
+body {
+  font-family: "Helvetica Neue", "Roboto", sans-serif; /*Меняем на тот что в макете*/
+  font-weight: 400px;
+  font-size: 16px;
+  background: #1A1A1A;
+  color: #A6A6A6;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%; /*чтоб wrapper всегда занимал все высоту*/
+}
+
+[class*=__container] {
+  max-width: 1140px; /*Добавили 1110рх + 30рх (включая padding 15px и 15рх)*/
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  display: inline-block;
+  background: #34C759;
+  border-radius: 43px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.2em;
+  color: #1A1A1A;
+  text-transform: capitalize;
+  padding: 25px 57px;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: #ffffff;
+}
+@media (max-width: 767.98px) {
+  .button {
+    font-size: 12px;
+    line-height: 1;
+    padding: 20px 37px;
+  }
+}
+
+.button_smal {
+  font-size: 10px;
+  line-height: 1;
+  padding: 17px 32px;
+}
+
+/*========================= Header ========================================================================*/
+.header {
+  padding: 33px 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media (max-width: 399px) {
+  .header {
+    padding: 20px 0;
+  }
+}
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+@media (max-width: 399px) {
+  .header__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.header__logo {
+  align-self: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-items {
+  display: flex;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
+}
+@media (max-width: 767.98px) {
+  .menu-items {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.menu-item {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.menu-link {
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.menu-link:hover {
+  color: #34C759;
+}
+
+.presentation {
+  padding: 170px 0 161px 0;
+  background: url(../images/main/presentation/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 767.98px) {
+  .presentation {
+    padding: 250px 0 161px 0;
+  }
+}
+@media (max-width: 399.98px) {
+  .presentation {
+    padding: 240px 0 161px 0;
+  }
+}
+.presentation__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.presentation__body *:last-child {
+  margin-bottom: 0px;
+}
+@media (max-width: 499.98px) {
+  .presentation__body > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.presentation__title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 1.1666;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.presentation__title span {
+  font-weight: 700;
+}
+@media (max-width: 1140px) {
+  .presentation__title {
+    max-width: 915px;
+    font-size: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .presentation__title {
+    max-width: 600px;
+    font-size: 40px;
+  }
+}
+@media (max-width: 399.98px) {
+  .presentation__title {
+    max-width: 400px;
+    font-size: 25px;
+  }
+}
+.presentation__text {
+  max-width: 595px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: -0.2px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: justify;
+  margin-bottom: 40px;
+  padding: 0 40px;
+}
+@media (max-width: 767.98px) {
+  .presentation__text {
+    max-width: 400px;
+    font-size: 15px;
+    color: #A6A6A6;
+    padding: 0 0px;
+  }
+}
+@media (max-width: 399.98px) {
+  .presentation__text {
+    line-height: 1.5;
+  }
+}
+.presentation__button {
+  margin-bottom: 70px;
+}
+
+.contacts {
+  max-width: 915px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -90px;
+}
+@media (max-width: 767.98px) {
+  .contacts {
+    margin: 0 -40px;
+  }
+}
+@media (max-width: 599.98px) {
+  .contacts {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+.contacts__column {
+  padding: 0 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .contacts__column {
+    padding: 0 20px;
+  }
+}
+.contacts__icon {
+  margin-bottom: 16px;
+}
+@media (max-width: 599.98px) {
+  .contacts__icon {
+    margin-bottom: 3px;
+  }
+}
+.contacts__value {
+  line-height: 1.875;
+  color: #FFFFFF;
+}
+.contacts__text {
+  font-size: 14px;
+  color: #A6A6A6;
+}/*# sourceMappingURL=style.css.map */

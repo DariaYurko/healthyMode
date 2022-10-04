@@ -136,6 +136,8 @@ body {
    left: 0;
    width: 100%;
 
+   display: none;
+
    @media (max-width: 399px) {
       padding: 20px 0;
 
@@ -200,17 +202,13 @@ body {
    background: url(../images/main/presentation/bg.jpg) no-repeat;
    background-size: cover;
    background-position: center;
+   display: none;
 
    @media (max-width: 767.98px) {
       padding: 250px 0 161px 0;
    }
    @media (max-width: 399.98px) {
       padding: 240px 0 161px 0;
-   }
-
-   // .presentation__container
-
-   &__container {
    }
 
    // .presentation__body
@@ -347,5 +345,135 @@ body {
 }
 
 
+
+//================= WORK ====================================
+
+
+
+.work {
+
+   //.work__container
+   &__container {
+   }
+
+   // .work__items
+
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+   }
+
+   // .work__item
+
+   &__item {
+      flex: 0 0 25%;
+      padding: 0 15px;
+   }
+}
+
+.double-title {
+   position: relative;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 59px;
+
+   &::after {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      height: 2px;
+      background-color: #34C759;
+
+      @media (max-width: 767.98px) {
+         // display: none;
+      }
+   }
+
+
+   &__title {
+      font-weight: 900;
+      font-size: 100px;
+      line-height: 150%;
+      letter-spacing: 0.15em;
+      color: #303030;
+      text-transform: uppercase;
+      text-align: center;
+   }
+
+   &__subtitle {
+      font-size: 36px;
+      letter-spacing: 0.2em;
+      text-transform: capitalize;
+      color: #D9D9D9;
+
+      position: absolute;
+   }
+}
+
+
+
+.item-work {
+   height: 100%;
+   padding: 24px 24px 60px;
+   background: #252525;
+   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+   border-radius: 6px;
+   *:not(:last-child) {
+      margin-bottom: 36px;
+   }
+
+   // .item-work_green
+   &_green {
+      background: #34C759;
+      color: #191919;
+
+   }
+
+   // .item-work__title
+
+   &__title {
+      min-width: 140px;
+      font-weight: 400;
+      font-size: 1.18;
+      line-height: 26px;
+      letter-spacing: -0.275px;
+      text-transform: capitalize;
+      color: #FFFFFF;
+      position: relative;
+
+      &::after {
+         content: "";
+         display: inline-block;
+         width: 56px;
+         height: 2px;
+         background-color: #34C759;
+
+         position: absolute;
+         bottom: -10px;
+         left: 0;
+      }
+   }
+
+   &__title_green {
+      color: #191919;
+
+      &::after {
+         background-color: #191919;
+      }
+   }
+
+   // .item-work__text
+
+   &__text {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.38;
+      letter-spacing: -0.1625px;
+   }
+}
 
 

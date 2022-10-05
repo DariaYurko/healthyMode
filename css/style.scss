@@ -145,7 +145,8 @@ body {
 }
 
 .work,
-.dishes {
+.dishes,
+.recipes {
    padding: 61px 0 30px 0;
 
    @media (max-width:1139.98px) {
@@ -235,7 +236,7 @@ body {
    background: url(../images/main/presentation/bg.jpg) no-repeat;
    background-size: cover;
    background-position: center;
-   // display: none;
+   display: none;
 
    @media (max-width: 1139.98px) {
       padding: 150px 0 100px 0;
@@ -292,6 +293,9 @@ body {
       @media (max-width: 767.98px) {
          max-width: 600px;
          font-size: 45px;
+      }
+      @media (max-width: 531.98px) {
+         font-size: 35px;
       }
       @media (max-width: 399.98px) {
          max-width: 400px;
@@ -457,6 +461,7 @@ body {
 //================= WORK ======================================
 
 .work {
+   display: none;
    //.work__container
    &__container {
    }
@@ -599,7 +604,7 @@ body {
 
 
 .dishes {
-
+   display: none;
    // .dishes__container
 
    &__container {
@@ -619,6 +624,13 @@ body {
    &__card {
       flex: 0 1 33.333%;
       padding: 0 15px;
+
+      @media (max-width: 767.98px) {
+         flex: 0 1 50%;
+      }
+      @media (max-width: 500px) {
+         flex: 0 1 100%;
+      }  
    }
 }
 
@@ -628,9 +640,6 @@ body {
 
    border-radius: 6px;
    height: 100%;
-   
-
-   // .card-dishes__image-box
 
    &__image-box {
       position: relative;
@@ -660,6 +669,9 @@ body {
       *:not(:last-child) {
          margin-bottom: 20px;
       }
+      @media (max-width: 530px) {
+         align-items: center;
+      }
    }
 
    // .card-dishes__titles
@@ -671,8 +683,14 @@ body {
 
    &__title {
       font-size: 32px;
-      line-height: 30px;
+      line-height: 0,9375;
       color: #D9D9D9;
+      @media (max-width: 991.98px) {
+         font-size: 24px;
+      }
+      @media (max-width: 530px) {
+         font-size: 30px;
+      }
    }
 
    // .card-dishes__subtitle
@@ -709,5 +727,264 @@ body {
    }
 }
 .button-order {
+}
+
+
+//=======================================================================
+
+//============================== recipes ================================
+
+
+.recipes {
+
+   // .recipes__container
+
+   &__container {
+   }
+
+ 
+   // .recipes__content
+
+   &__content {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+   }
+
+   // .recipes__column
+
+   &__column {
+      flex: 1 0 50%;
+   }
+
+}
+.column-big {
+   height: 100%;
+   margin: 0 15px;      
+   position: relative;
+
+   .meal {
+      height: 100%;
+      padding: 60px 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   // .column-big__arrow
+
+   &__arrow {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      display: inline-block;
+      width: 40px; 
+      height: 40px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   // .column-big__link-arrow
+
+   &__link-arrow {
+   }
+
+   // .column-big__breakfast
+
+   &__breakfast {
+      background: #252525 url(../images/main/recipes/breakfast.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 6px;
+
+      .meal__label {
+         // text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         row-gap: 65px;
+         margin-bottom: 25px;
+      }
+
+      .meal__block-text {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         row-gap: 45px;
+         margin-bottom: 65px;
+      }
+   }
+}
+
+.column-triple {
+   margin: 0 15px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   .meal {
+      padding: 30px 30px 20px 30px;
+      border-radius: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      // gap: 10px;
+      row-gap: 10px;
+      column-gap: 10px;
+      // flex-direction: column;
+   }
+
+   .meal__label {
+      display: flex;
+      column-gap: 15px;
+      order: 2;
+   }
+
+   .meal__block-text {
+      flex: 1 1 auto;
+      order: 1;
+   }
+   .views {
+      order: 3;
+   }
+
+   // .meal__data
+   .meal__data {
+      font-size: 12px;
+      line-height: 2.08;
+      color: #B3B3B3;
+   }
+
+   .meal__text {
+      font-size: 16px;
+      line-height: 1.88;
+   }
+
+
+
+   // .column-triple__lunch
+   &__lunch {
+      background: #252525; 
+   }
+
+   // .column-triple__dinner
+   &__dinner {
+      background: #252525 url(../images/main/recipes/dinner.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+
+   // .column-triple__sweets
+   &__sweets {
+      background: #252525; 
+      // background: #34C759;
+   }
+}
+
+.meal {
+
+   // .meal__label
+   &__label {
+      // text-align: center;
+   }
+
+   // .meal__name
+   &__name {
+      display: inline-block;
+      padding: 0 16px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      font-weight: 900;
+      font-size: 10px;
+      line-height: 250%;
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+   }
+
+   // .meal__data
+   &__data {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 2.14;
+      color: #FFFFFF;
+   }
+
+   // .meal__block-text
+   &__block-text {
+   }
+
+   // .meal__text
+   &__text {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.67;
+      color: #FFFFFF;
+   }
+
+   // .meal__author
+   &__author {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 2.14;
+      color: #FFFFFF;
+   }
+
+   // .meal_green
+   &_green {
+      background: #34C759;
+
+      .meal__data,
+      .meal__text {
+         color: #252525;
+      }
+
+      .meal__name {
+         background: #000000;
+      }
+   }
+}
+
+.views {
+   display: flex;
+   column-gap: 33px;
+
+   // .views__link
+   &__link {
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+   }
+
+   // .views__image
+   &__image {
+   }
+
+   // .views__prop
+   &__prop {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 2.5;
+      color: #FFFFFF;
+   }
+
+   // .views__comments
+   &__comments {
+   }
+}
+
+
+.column-triple {
+
+   // .column-triple__sweets
+
+   &__sweets {
+   }
 }
 

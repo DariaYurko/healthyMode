@@ -207,7 +207,6 @@ body {
   background: url(../images/main/presentation/bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  display: none;
 }
 @media (max-width: 1139.98px) {
   .presentation {
@@ -406,6 +405,7 @@ body {
   text-transform: capitalize;
   color: #D9D9D9;
   position: absolute;
+  text-align: center;
 }
 @media (max-width: 767.98px) {
   .double-title__subtitle {
@@ -418,9 +418,6 @@ body {
   }
 }
 
-.work {
-  display: none;
-}
 .work__items {
   display: flex;
   flex-wrap: wrap;
@@ -536,9 +533,6 @@ body {
   }
 }
 
-.dishes {
-  display: none;
-}
 .dishes__cards {
   display: flex;
   flex-wrap: wrap;
@@ -630,8 +624,18 @@ body {
   flex-wrap: wrap;
   margin: 0 -15px;
 }
+@media (max-width: 767.98px) {
+  .recipes__content {
+    row-gap: 30px;
+  }
+}
 .recipes__column {
   flex: 1 0 50%;
+}
+@media (max-width: 767.98px) {
+  .recipes__column {
+    flex: 1 0 100%;
+  }
 }
 
 .column-big {
@@ -650,6 +654,11 @@ body {
 @media (max-width: 991.98px) {
   .column-big .meal {
     padding: 72px 30px 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .column-big .meal {
+    padding: 22px 23px 16px;
   }
 }
 .column-big .meal__label {
@@ -677,6 +686,12 @@ body {
     row-gap: 15px;
   }
 }
+@media (max-width: 767.98px) {
+  .column-big .meal__block-text {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+}
 .column-big .meal__data {
   font-weight: 400;
   font-size: 14px;
@@ -686,6 +701,12 @@ body {
   font-weight: 400;
   font-size: 24px;
   line-height: 1.67;
+}
+@media (max-width: 767.98px) {
+  .column-big .meal__text {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 .column-big__arrow {
   position: absolute;
@@ -720,6 +741,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+@media (max-width: 767.98px) {
+  .column-triple {
+    row-gap: 30px;
+  }
+}
 .column-triple .meal {
   padding: 30px 30px 20px 30px;
   display: flex;
@@ -733,6 +759,12 @@ body {
   .column-triple .meal {
     row-gap: 25px;
     padding: 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .column-triple .meal {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
 }
 .column-triple .meal__label {

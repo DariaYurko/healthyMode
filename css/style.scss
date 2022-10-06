@@ -236,7 +236,7 @@ body {
    background: url(../images/main/presentation/bg.jpg) no-repeat;
    background-size: cover;
    background-position: center;
-   display: none;
+   // display: none;
 
    @media (max-width: 1139.98px) {
       padding: 150px 0 100px 0;
@@ -445,6 +445,7 @@ body {
       text-transform: capitalize;
       color: #D9D9D9;
       position: absolute;
+      text-align: center;
 
       @media (max-width:767.98px) {
          font-size: 25px;
@@ -461,7 +462,7 @@ body {
 //================= WORK ======================================
 
 .work {
-   display: none;
+   // display: none;
    //.work__container
    &__container {
    }
@@ -604,7 +605,8 @@ body {
 
 
 .dishes {
-   display: none;
+   // display: none;
+
    // .dishes__container
 
    &__container {
@@ -747,6 +749,9 @@ body {
    &__content {
       display: flex;
       flex-wrap: wrap;
+      @media (max-width: 767.98px) {
+         row-gap: 30px;
+      }
       margin: 0 -15px;
    }
 
@@ -754,6 +759,10 @@ body {
 
    &__column {
       flex: 1 0 50%;
+
+      @media (max-width: 767.98px) {
+         flex: 1 0 100%;
+      }
    }
 }
 
@@ -776,6 +785,12 @@ body {
       @media (max-width: 991.98px) {
          padding: 72px 30px 50px;
       }
+
+      @media (max-width: 767.98px) {
+         padding: 22px 23px 16px;
+      }
+
+
    }
 
    .meal__label {
@@ -802,6 +817,11 @@ body {
       @media (max-width: 991.98px) {
          row-gap: 15px;
       }
+
+      @media (max-width: 767.98px) {
+         margin-bottom: 20px;
+         text-align: justify;
+      }
    }
 
    .meal__data {
@@ -814,6 +834,11 @@ body {
       font-weight: 400;
       font-size: 24px;
       line-height: 1.67;
+
+      @media (max-width: 767.98px) {
+         font-size: 20px;
+         line-height: 1.5;
+      }
    }
 
 
@@ -860,9 +885,9 @@ body {
    flex-direction: column;
    justify-content: space-between;
 
-   // @media (max-width: 767.98px) {
-   //    flex-direction: row
-   // }
+   @media (max-width: 767.98px) {
+      row-gap: 30px;
+   }
 
    .meal {
       padding: 30px 30px 20px 30px;
@@ -876,6 +901,10 @@ body {
          row-gap: 25px;
          padding: 15px;
       }
+      @media (max-width: 767.98px) {
+         column-gap: 30px;
+      }
+
    }
 
    .meal__label {

@@ -742,7 +742,6 @@ body {
    &__container {
    }
 
- 
    // .recipes__content
 
    &__content {
@@ -756,8 +755,11 @@ body {
    &__column {
       flex: 1 0 50%;
    }
-
 }
+
+
+// .column-big
+
 .column-big {
    height: 100%;
    margin: 0 15px;      
@@ -768,11 +770,54 @@ body {
       padding: 60px 90px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
+
+      @media (max-width: 991.98px) {
+         padding: 72px 30px 50px;
+      }
    }
 
-   // .column-big__arrow
+   .meal__label {
+      // text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 65px;
+      margin-bottom: 25px;
 
+      @media (max-width: 991.98px) {
+         row-gap: 10px;
+      }
+   }
+
+   .meal__block-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      row-gap: 45px;
+      margin-bottom: 65px;
+
+      @media (max-width: 991.98px) {
+         row-gap: 15px;
+      }
+   }
+
+   .meal__data {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 2.14;
+   }
+
+   .meal__text {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.67;
+   }
+
+
+   // .column-big__arrow
    &__arrow {
       position: absolute;
       top: 30px;
@@ -786,6 +831,11 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media (max-width: 991.98px) {
+         top: 15px;
+         right: 20px;
+      }
    }
 
    // .column-big__link-arrow
@@ -800,24 +850,6 @@ body {
       background-size: cover;
       background-position: center;
       border-radius: 6px;
-
-      .meal__label {
-         // text-align: center;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         row-gap: 65px;
-         margin-bottom: 25px;
-      }
-
-      .meal__block-text {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         text-align: center;
-         row-gap: 45px;
-         margin-bottom: 65px;
-      }
    }
 }
 
@@ -828,44 +860,59 @@ body {
    flex-direction: column;
    justify-content: space-between;
 
+   // @media (max-width: 767.98px) {
+   //    flex-direction: row
+   // }
+
    .meal {
       padding: 30px 30px 20px 30px;
-      border-radius: 6px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      // gap: 10px;
-      row-gap: 10px;
       column-gap: 10px;
-      // flex-direction: column;
+      row-gap: 10px;
+
+      @media (max-width: 991.98px) {
+         row-gap: 25px;
+         padding: 15px;
+      }
    }
 
    .meal__label {
+      order: 2;
       display: flex;
       column-gap: 15px;
-      order: 2;
+
+      @media (max-width: 991.98px) {
+         column-gap: 10px;
+      }
    }
 
    .meal__block-text {
-      flex: 1 1 auto;
       order: 1;
+      flex: 1 1 auto;
    }
+
    .views {
       order: 3;
+
+      @media (max-width: 991.98px) {
+         column-gap: 20px;
+      }
+
+      &__link {
+         @media (max-width: 991.98px) {
+            column-gap: 5px;
+         }
+      }
    }
 
    // .meal__data
    .meal__data {
-      font-size: 12px;
-      line-height: 2.08;
-      color: #B3B3B3;
    }
 
    .meal__text {
-      font-size: 16px;
-      line-height: 1.88;
    }
-
 
 
    // .column-triple__lunch
@@ -883,11 +930,12 @@ body {
    // .column-triple__sweets
    &__sweets {
       background: #252525; 
-      // background: #34C759;
    }
 }
 
+
 .meal {
+   border-radius: 6px;
 
    // .meal__label
    &__label {
@@ -911,8 +959,8 @@ body {
    // .meal__data
    &__data {
       font-weight: 400;
-      font-size: 14px;
-      line-height: 2.14;
+      font-size: 12px;
+      line-height: 2.08;
       color: #FFFFFF;
    }
 
@@ -923,9 +971,13 @@ body {
    // .meal__text
    &__text {
       font-weight: 400;
-      font-size: 24px;
-      line-height: 1.67;
+      font-size: 16px;
+      line-height: 1.88;
       color: #FFFFFF;
+
+      @media (max-width: 991.98px) {
+         line-height: 1.5;
+      }
    }
 
    // .meal__author
@@ -976,15 +1028,6 @@ body {
 
    // .views__comments
    &__comments {
-   }
-}
-
-
-.column-triple {
-
-   // .column-triple__sweets
-
-   &__sweets {
    }
 }
 

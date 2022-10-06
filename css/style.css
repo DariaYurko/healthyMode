@@ -644,7 +644,48 @@ body {
   padding: 60px 90px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 991.98px) {
+  .column-big .meal {
+    padding: 72px 30px 50px;
+  }
+}
+.column-big .meal__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 65px;
+  margin-bottom: 25px;
+}
+@media (max-width: 991.98px) {
+  .column-big .meal__label {
+    row-gap: 10px;
+  }
+}
+.column-big .meal__block-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 45px;
+  margin-bottom: 65px;
+}
+@media (max-width: 991.98px) {
+  .column-big .meal__block-text {
+    row-gap: 15px;
+  }
+}
+.column-big .meal__data {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.14;
+}
+.column-big .meal__text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.67;
 }
 .column-big__arrow {
   position: absolute;
@@ -659,26 +700,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 991.98px) {
+  .column-big__arrow {
+    top: 15px;
+    right: 20px;
+  }
+}
 .column-big__breakfast {
   background: #252525 url(../images/main/recipes/breakfast.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   border-radius: 6px;
-}
-.column-big__breakfast .meal__label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 65px;
-  margin-bottom: 25px;
-}
-.column-big__breakfast .meal__block-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  row-gap: 45px;
-  margin-bottom: 65px;
 }
 
 .column-triple {
@@ -690,35 +722,49 @@ body {
 }
 .column-triple .meal {
   padding: 30px 30px 20px 30px;
-  border-radius: 6px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 10px;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  row-gap: 10px;
+}
+@media (max-width: 991.98px) {
+  .column-triple .meal {
+    row-gap: 25px;
+    padding: 15px;
+  }
 }
 .column-triple .meal__label {
+  order: 2;
   display: flex;
   -moz-column-gap: 15px;
        column-gap: 15px;
-  order: 2;
+}
+@media (max-width: 991.98px) {
+  .column-triple .meal__label {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
 }
 .column-triple .meal__block-text {
-  flex: 1 1 auto;
   order: 1;
+  flex: 1 1 auto;
 }
 .column-triple .views {
   order: 3;
 }
-.column-triple .meal__data {
-  font-size: 12px;
-  line-height: 2.08;
-  color: #B3B3B3;
+@media (max-width: 991.98px) {
+  .column-triple .views {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
 }
-.column-triple .meal__text {
-  font-size: 16px;
-  line-height: 1.88;
+@media (max-width: 991.98px) {
+  .column-triple .views__link {
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+  }
 }
 .column-triple__lunch {
   background: #252525;
@@ -732,6 +778,9 @@ body {
   background: #252525;
 }
 
+.meal {
+  border-radius: 6px;
+}
 .meal__name {
   display: inline-block;
   padding: 0 16px;
@@ -746,15 +795,20 @@ body {
 }
 .meal__data {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 2.14;
+  font-size: 12px;
+  line-height: 2.08;
   color: #FFFFFF;
 }
 .meal__text {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.88;
   color: #FFFFFF;
+}
+@media (max-width: 991.98px) {
+  .meal__text {
+    line-height: 1.5;
+  }
 }
 .meal__author {
   font-weight: 400;

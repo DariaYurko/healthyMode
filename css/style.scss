@@ -1155,22 +1155,35 @@ body {
    &__content {
       display: flex;
       margin: 0 -15px;
+
+      @media (max-width: 767.98px) {
+         flex-wrap: wrap;
+         row-gap: 40px;
+      }
    }
 
    // .chefs__item
 
    &__item {
       flex: 0 0 33.333%;
-      // border: 1px solid red;
+      
+      @media (max-width:767.98px) {
+         flex: 0 0 50%;
+      }
+
+      @media (max-width: 500.98px) {
+         flex: 0 0 100%;
+      }
    }
 }
 
 .item-chef {
-   padding: 0 15px;
+   margin: 0 15px;
 
    display: flex;
    flex-direction: column;
    row-gap: 24px;
+
 
    // .item-chef__author
 
@@ -1178,6 +1191,9 @@ body {
       display: flex;
       align-items: center;
       column-gap: 24px;
+      @media (max-width:1139.98px) {
+         justify-content: center;
+      }
    }
 
    // .item-chef__avatar-box
@@ -1224,9 +1240,9 @@ body {
    }
 }
 
-.item-chef {
 
-   // .item-chef__galery
+.item-chef {
+    // .item-chef__galery
 
    &__galery {
    }
@@ -1234,44 +1250,28 @@ body {
 
 .chef-galery {
    display: flex;
-   margin: 0 -15px;
+   justify-content: space-between;
+   row-gap: 30px;
 
-   // .chef-galery__column
-
-   &__column {
-      flex: 0 0 50%;
-
-      // .chef-galery__column_double
-
-      &_double {
-         display: flex;
-
-      }
+   @media (max-width:1139.98px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 30px;
    }
-
-   // .chef-galery__inner-column
-
-   &__inner-column {
-      flex: 0 0 50%;
-
-   }
+  
 
    // .chef-galery__image-box
 
    &__image-box {
-      margin: 0 15px;
-      position: relative;
-
-
+      flex: 0 0 65px;
+      height: 65px;
       // .chef-galery__image-box_big
-      &_big { 
-         padding: 0 0 34.210% 0;  //(165px + 30px padd / 65px) *100
+      &_big {
+         flex: 0 0 160px;
 
-      }
-
-      &_smal {
-         padding: 0 0 68.421% 0;  //(165px + 30px padd / 65px) *100
-
+         @media (max-width:1139.98px) {
+            order: 3;
+         }
       }
    }
 
@@ -1282,10 +1282,5 @@ body {
       height: 100%;
       object-fit: cover;
       object-position: center;
-
-      position: absolute;
-      top: 0;
-      left: 0;
    }
 }
-

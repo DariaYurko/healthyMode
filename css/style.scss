@@ -1168,7 +1168,7 @@ body {
       flex: 0 0 33.333%;
       
       @media (max-width:767.98px) {
-         flex: 0 0 50%;
+         flex: 1 0 50%;
       }
 
       @media (max-width: 500.98px) {
@@ -1270,6 +1270,12 @@ body {
          flex: 0 0 160px;
 
          @media (max-width:1139.98px) {
+            order: 3;
+         }
+         @media (max-width: 500.98px) {
+            order: 0;
+         }
+         @media (max-width: 379.98px) {
             order: 3;
          }
       }

@@ -1183,11 +1183,12 @@ body {
    display: flex;
    flex-direction: column;
    row-gap: 24px;
-
+   height: 100%;
 
    // .item-chef__author
 
    &__author {
+      flex-grow: 1;
       display: flex;
       align-items: center;
       column-gap: 24px;
@@ -1199,7 +1200,7 @@ body {
    // .item-chef__avatar-box
 
    &__avatar-box {
-      align-self: flex-start;
+      // align-self: flex-start;
 
       flex: 0 0 65px;
       height: 65px;
@@ -1219,6 +1220,7 @@ body {
    // .item-chef__info
 
    &__info {
+  
    }
 
    // .item-chef__name

@@ -968,8 +968,10 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+  height: 100%;
 }
 .item-chef__author {
+  flex-grow: 1;
   display: flex;
   align-items: center;
   -moz-column-gap: 24px;
@@ -981,7 +983,6 @@ body {
   }
 }
 .item-chef__avatar-box {
-  align-self: flex-start;
   flex: 0 0 65px;
   height: 65px;
 }

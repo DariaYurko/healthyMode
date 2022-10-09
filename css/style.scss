@@ -201,7 +201,9 @@ body {
 }
 
 .logo {
+   &__img{}
 }
+
 .menu {
    display: flex;
    align-items: center;
@@ -258,6 +260,13 @@ body {
       align-items: center;
       *:last-child {
          margin-bottom: 0px;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 70px;
+         @media (max-width:767.98px) {
+            margin-bottom: 30px;
+         }
       }
 
       @media (max-width:767.98px) {
@@ -341,29 +350,42 @@ body {
    }
 }
 
-.contacts {
-   max-width: 915px;
-   display: flex;
-   flex-wrap: wrap;
-   margin: 0 -90px;
 
-   @media (max-width: 767.98px) {
-      margin: 0 -40px;
-   }
-   @media (max-width: 599.98px) {
-      flex-direction: column;
+//==========================================================================
+
+//========================= Contacts =======================================
+
+
+.contacts {
+
+   &__body {
+      margin: 0 auto;
+      max-width: 917px;
+      display: flex;
+      justify-content: space-between;
       row-gap: 30px;
+
+      @media (max-width: 767.98px) {
+         flex-wrap: wrap;
+      }
+      @media (max-width: 599.98px) {
+         flex-direction: column;
+         row-gap: 30px;
+      }
    }
-   
+
    // .contacts__column
 
    &__column {
-      padding: 0 45px;
+
+      flex: 0 0 245px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 0 15px;
+
       @media (max-width:767.98px) {
-         padding: 0 20px;
+         flex: 0 0 50%;
       }
    }
 
@@ -1292,3 +1314,39 @@ body {
       object-position: center;
    }
 }
+
+
+//============================================================
+//================================= Footer====================
+
+
+.footer {
+   background: #252525;
+
+   // .footer__contacts
+
+   &__contacts {
+      padding: 30px 0;
+   }
+
+   // .footer__logo
+
+   &__logo {
+      border-top: 2px solid rgba($color: #ffffff, $alpha: 0.1);
+      padding: 30px 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+   }
+
+   // .footer__copy
+
+   &__copy {
+      font-size: 12px;
+      line-height: 1.8;
+      color: #737373;
+   }
+}
+

@@ -129,19 +129,19 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.about,
 .work,
 .dishes,
-.recipes,
-.about,
-.chefs {
+.chefs,
+.recipes {
   padding: 61px 0 30px 0;
 }
 @media (max-width: 1139.98px) {
-  .work,
+  .about,
+.work,
 .dishes,
-.recipes,
-.about,
-.chefs {
+.chefs,
+.recipes {
     padding: 30px 0 30px 0;
   }
 }
@@ -489,14 +489,14 @@ body {
 .item-work:hover .item-work__title::after {
   background-color: #191919;
 }
-.item-work_green {
+.item-work.active {
   background: #34C759;
   color: #191919;
 }
-.item-work_green .item-work__title {
+.item-work.active .item-work__title {
   color: #191919;
 }
-.item-work_green .item-work__title::after {
+.item-work.active .item-work__title::after {
   background-color: #191919;
 }
 .item-work__title {
@@ -891,6 +891,7 @@ body {
   color: #FFFFFF;
 }
 .about {
+  display: none;
   padding-bottom: 90px;
   background-color: #252525;
 }

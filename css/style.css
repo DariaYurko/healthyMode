@@ -129,11 +129,26 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.link-dark {
+  display: inline-block;
+  text-align: center;
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #737373;
+  padding: 15px 18px;
+  border: 2px solid #303030;
+  border-radius: 30px;
+}
+
 .about,
 .work,
 .dishes,
 .chefs,
-.recipes {
+.recipes,
+.social {
   padding: 61px 0 30px 0;
 }
 @media (max-width: 1139.98px) {
@@ -141,7 +156,8 @@ body {
 .work,
 .dishes,
 .chefs,
-.recipes {
+.recipes,
+.social {
     padding: 30px 0 30px 0;
   }
 }
@@ -1081,4 +1097,114 @@ body {
   font-size: 12px;
   line-height: 1.8;
   color: #737373;
+}
+
+.social__content {
+  display: flex;
+  margin: 0 -15px;
+}
+.social__item {
+  flex: 0 1 33.333%;
+  margin: 0 15px;
+}
+
+.item-social {
+  height: 100%;
+  background: #262626;
+  border-radius: 6px;
+}
+.item-social__header {
+  padding: 25px 25px 23px 25px;
+  border-bottom: 2px solid #303030;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-social__logo {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.item-social__logo-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #303030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-social__logo-img {
+  width: 28px;
+  height: 28px;
+}
+.item-social__title {
+  font-size: 15px;
+  color: #BFBFBF;
+}
+.item-social__body {
+  height: 100%;
+  padding: 20px 40px 20px 30px;
+  max-height: 228px;
+  overflow-y: scroll;
+}
+.item-social__body::-webkit-scrollbar {
+  width: 4px;
+}
+.item-social__body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.item-social__body::-webkit-scrollbar-thumb {
+  background: #303030;
+  border-radius: 4px;
+}
+.item-social__post:not(:last-child) {
+  margin-bottom: 20px;
+}
+.item-social__post > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+.item-social__date {
+  font-size: 15px;
+  line-height: 2.14;
+  color: #737373;
+}
+.item-social__text {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.1;
+}
+.item-social__author {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.14;
+  color: #34C759;
+}
+
+.item-social__body_insta {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-social__body_insta > *:not(:last-child) {
+  margin-bottom: 0px;
+}
+.item-social__body_insta::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+}
+.item-social__image-box {
+  position: relative;
+  padding-bottom: 33.333%;
+  flex: 0 0 33.333%;
+}
+.item-social__img-insta {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=style.css.map */

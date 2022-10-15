@@ -141,14 +141,28 @@ body {
 .button-order_gray {
    background: #252525;
    color: rgba(255, 255, 255, 0.5);
+}
 
+.link-dark {
+   display: inline-block;
+   text-align: center;
+   font-weight: 900;
+   font-size: 10px;
+   line-height: 1;
+   letter-spacing: 0.2em;
+   text-transform: uppercase;
+   color: #737373;
+   padding: 15px 18px;
+   border: 2px solid #303030;
+   border-radius: 30px;
 }
 
 .about,
 .work,
 .dishes,
 .chefs,
-.recipes {
+.recipes,
+.social {
    padding: 61px 0 30px 0;
 
    @media (max-width:1139.98px) {
@@ -1165,7 +1179,7 @@ body {
 }
 
 
-//======================================================
+//=================================================================
 
 //=========================== Chefs ================================
 
@@ -1347,6 +1361,239 @@ body {
       font-size: 12px;
       line-height: 1.8;
       color: #737373;
+   }
+}
+
+
+//==============================================================
+
+//=========================== Social ===========================
+
+
+.social {
+   padding-bottom: 120px;
+
+   @media (max-width: 767.98px) {
+   padding-bottom: 90px;
+   }
+   // .social__container
+
+   &__container {
+   }
+
+   // .social__content
+
+   &__content {
+      display: flex;
+      margin: 0 -15px;
+      row-gap: 30px;
+
+      @media (max-width: 767.98px) {
+         flex-wrap: wrap;
+      }
+   }
+
+   // .social__item
+
+   &__item {
+      flex: 0 1 33.333%;
+      margin: 0 15px;
+
+      @media (max-width: 767.98px) {
+         flex-grow: 1;
+      }
+      @media (max-width: 500.98px) {
+         flex: 0 1 100%;
+      }
+   }
+}
+
+.item-social {
+   height: 100%;
+   background: #262626;
+   border-radius: 6px;
+
+   // .item-social__header
+
+   &__header {
+      padding: 25px 25px 23px 25px;
+      border-bottom: 2px solid #303030;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 10px;
+
+      @media (max-width: 991.98px) {
+         padding: 15px;
+         align-items: flex-end;
+      }
+   }
+
+   // .item-social__logo
+
+   &__logo {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      row-gap: 10px;
+
+      @media (max-width: 991.98px) {
+         flex-direction: column-reverse;
+      }
+      @media (max-width: 500.98px) {
+         flex-direction: row;
+      }
+   }
+
+   // .item-social__logo-box
+
+   &__logo-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #303030;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   // .item-social__logo-img
+
+   &__logo-img {
+      width: 28px;
+      height: 28px;
+   }
+
+   // .item-social__title
+
+   &__title {
+      font-size: 15px;
+      // line-height: 2.14;
+      color: #BFBFBF;
+   }
+
+   // .item-social__link
+
+   &__link {
+
+   }
+
+   // .item-social__body
+
+   &__body {
+      height: 100%;
+      padding: 20px 40px 20px 30px;
+      max-height: 228px;
+      overflow-y: scroll;
+
+      // >*:not(:last-child) {
+      //    margin-bottom: 10px;
+      // }
+
+      &::-webkit-scrollbar {
+         width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+         background: transparent;
+
+      }
+
+      &::-webkit-scrollbar-thumb {
+         background: #303030;
+         border-radius: 4px;
+      }
+   }
+
+   &__post {
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+
+      >*:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+
+
+   // .item-social__date
+
+   &__date {
+      font-size: 15px;
+      line-height: 2.14;
+      color: #737373;
+   }
+
+   // .item-social__text
+
+   &__text {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 2.1;
+   }
+
+   // .item-social__author
+
+   &__author {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 2.14;
+      color: #34C759;
+   }
+
+}
+.twitter {
+}
+
+
+
+.item-social {
+
+   // .item-social__body
+
+   &__body {
+
+      // .item-social__body_insta
+
+      &_insta {
+         padding: 0;
+         display: flex;
+         flex-wrap: wrap;
+
+         >*:not(:last-child) {
+            margin-bottom: 0px;
+         }
+
+         &::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.5);
+         }
+      }
+   }
+
+   // .item-social__box-insta
+
+   // &__element {
+   //    flex: 0 1 33.333%;
+   // }
+
+   &__image-box {
+      position: relative;
+      // padding-bottom: 100%;
+      padding-bottom: 33.333%;
+
+      flex: 0 0 33.333%;
+   }
+
+   // .item-social__img-insta
+
+   &__img-insta {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
    }
 }
 

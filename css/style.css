@@ -1263,12 +1263,10 @@ body {
   }
 }
 .column-big .meal__data {
-  font-weight: 400;
   font-size: 14px;
   line-height: 2.14;
 }
 .column-big .meal__text {
-  font-weight: 400;
   font-size: 24px;
   line-height: 1.67;
 }

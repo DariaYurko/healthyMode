@@ -433,6 +433,65 @@ body {
   }
 }
 
+.about {
+  padding-bottom: 90px;
+  background-color: #252525;
+}
+@media (max-width: 767.98px) {
+  .about {
+    padding-bottom: 30px;
+  }
+}
+.about__body {
+  max-width: 734px;
+  margin: 0 auto;
+}
+.about__body > *:not(:last-child) {
+  margin-bottom: 90px;
+}
+@media (max-width: 767.98px) {
+  .about__body > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.about__text {
+  line-height: 1.88;
+  color: #A6A6A6;
+  text-align: center;
+}
+.about__images {
+  display: flex;
+  row-gap: 30px;
+  margin: 0 -17px;
+}
+@media (max-width: 767.98px) {
+  .about__images {
+    flex-wrap: wrap;
+  }
+}
+.about__item {
+  flex: 1 0 50%;
+  padding: 0 17px;
+}
+@media (max-width: 549.98px) {
+  .about__item {
+    flex: 1 0 100%;
+  }
+}
+.about__image-box {
+  position: relative;
+  padding-bottom: 77.142%;
+}
+.about__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+}
+
 .work__items {
   display: flex;
   flex-wrap: wrap;
@@ -891,65 +950,6 @@ body {
   line-height: 2.5;
   color: #FFFFFF;
 }
-.about {
-  padding-bottom: 90px;
-  background-color: #252525;
-}
-@media (max-width: 767.98px) {
-  .about {
-    padding-bottom: 30px;
-  }
-}
-.about__body {
-  max-width: 734px;
-  margin: 0 auto;
-}
-.about__body > *:not(:last-child) {
-  margin-bottom: 90px;
-}
-@media (max-width: 767.98px) {
-  .about__body > *:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-.about__text {
-  line-height: 1.88;
-  color: #A6A6A6;
-  text-align: center;
-}
-.about__images {
-  display: flex;
-  row-gap: 30px;
-  margin: 0 -17px;
-}
-@media (max-width: 767.98px) {
-  .about__images {
-    flex-wrap: wrap;
-  }
-}
-.about__item {
-  flex: 1 0 50%;
-  padding: 0 17px;
-}
-@media (max-width: 549.98px) {
-  .about__item {
-    flex: 1 0 100%;
-  }
-}
-.about__image-box {
-  position: relative;
-  padding-bottom: 77.142%;
-}
-.about__img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  position: absolute;
-}
-
 .chefs__content {
   display: flex;
   margin: 0 -15px;

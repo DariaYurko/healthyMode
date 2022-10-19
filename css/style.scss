@@ -179,7 +179,6 @@ body {
 
    @media (max-width: 399px) {
       padding: 20px 0;
-
    }
 
    // .header__container
@@ -203,7 +202,10 @@ body {
 }
 
 .logo {
-   &__img{}
+
+   // .logo__img
+   &__img {}
+
 }
 
 .menu {
@@ -1092,7 +1094,7 @@ body {
 
 
 .about {
-   display: none;
+   // display: none;
    padding-bottom: 90px;
    background-color: #252525;;
 
